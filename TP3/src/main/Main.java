@@ -16,15 +16,29 @@ public class Main {
 		int edicao = 8;
 		//Produto estoque[] = new Produto[99];
 		List<Produto> list = new ArrayList<>();
-		int n = 0;
+		Estoque estoqueLivraria = new Estoque(list);
+		//int n = 0;
+		String revistaNome ="VOGUE";
+		String tipoDeRevista = "Moda";
+		String tituloRevista = "Ivete";
+		Date dataDePublicacao = hoje;
+		float preco = 10;
+		String editora = "Vogue Brasil";
+		int edicaoRevista = 500;
 		
+		
+		Revista revista1 = new Revista(revistaNome, tipoDeRevista, tituloRevista, dataDePublicacao, preco, editora, edicaoRevista);
 		
 		Livro livro1 = new Livro(autorLivro, generoLivro, titulo, hoje, precoLivro, editoraLivro, edicao);
-		n = n+1;
+		//n = n+1;
 		list.add(livro1);
-	    Estoque estoqueLivraria = new Estoque(list, n);
+		list.add(revista1);
 	    estoqueLivraria.mostrarEstoque();
-
+	    estoqueLivraria.pesquisaRevista("VOGUE");
+	    estoqueLivraria.pesquisaLivro("O susto");
+	    estoqueLivraria.pesquisaRevista("PLAYBOY");
+	    estoqueLivraria.pesquisaLivro("Manifesto comunista");
+	    
 	}
 
 }

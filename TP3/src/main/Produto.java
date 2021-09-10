@@ -10,6 +10,12 @@ public abstract class Produto {
 	protected String editora;
 	protected int edicao;
 	
+	public boolean comparaProduto(Produto product, String a) {
+		return product.getAtributoComparacao().equals(a);
+	}
+	
+	protected abstract Object getAtributoComparacao();
+
 	public static void mostraProduto(Produto product) {
 		System.out.println(product.toString());
 	}
