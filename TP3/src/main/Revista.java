@@ -18,6 +18,11 @@ public class Revista extends Produto {
 		super.edicao = edicao;
 	}
 	
+	
+	public String getAtributoComparacao() {
+		return getNome();
+	}
+	
 	public String toString() {
 		return nome + " " + super.titulo +  " REVISTA da data: " + super.dataDePublicacao;
 	}

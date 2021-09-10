@@ -18,6 +18,9 @@ public class Livro extends Produto {
 		super.edicao = edicao;
 	}
 	
+	public String getAtributoComparacao() {
+		return getTitulo();
+	}
 	public String toString() {
 		return super.titulo + " -LIVRO de " + autor;
 	}
